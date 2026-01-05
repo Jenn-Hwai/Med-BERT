@@ -19,11 +19,11 @@ You can run the following to convert the input data format shown above to a pick
 
     python preprocess_pretrain_data.py <data_File> <vocab/NA> <output_Prefix> <subset_size>
 
-data_File: is the path for the extracted tab-delimited file
-vocab: is the path of a vocabulary (types) file which includes a dictionary that maps different ICD9/10 codes to integer values.
-if you have a pre-existing vocab file, you can use the path for such a file or you can use NA to create a new one.
-output_Prefix: will be the prefix assigned to output files (more details can be found in [preprocess_pretrain_data.py](Data%20Pre-processing%20Code/preprocess_pretrain_data.py) header
-<subset_size>: if you need to only preprocess a subset of the data, specify the subset size here (that should be the number of patients to be included), if you set it to 0 it will include all data.
+-data_File: is the path for the extracted `tab-delimited` file   
+-vocab: is the path of a vocabulary (types) file which includes a dictionary that maps different ICD9/10 codes to integer values.   
+if you have a pre-existing vocab file, you can use the path for such a file or you can use NA to create a new one.   
+-output_Prefix: will be the prefix assigned to output files (more details can be found in [preprocess_pretrain_data.py](Data%20Pre-processing%20Code/preprocess_pretrain_data.py) header
+-<subset_size>: if you need to only preprocess a subset of the data, specify the subset size here (that should be the number of patients to be included), if you set it to 0 it will include all data.
 
 The output will be a list of patients and each patient is a pickled list like:
 
