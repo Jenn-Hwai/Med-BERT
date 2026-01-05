@@ -23,7 +23,10 @@ You can run the following to convert the input data format shown above to a pick
 - <vocab/NA> : is the path of a vocabulary (types) file which includes a dictionary that maps different ICD9/10 codes to integer values.(詞彙表文件路徑。如果是第一次運行且還沒有詞彙表，可以填入 NA，腳本會根據輸入資料自動生成。)   
 if you have a pre-existing vocab file, you can use the path for such a file or you can use NA to create a new one.   
 - <output_Prefix>: will be the prefix assigned to output files (more details can be found in [preprocess_pretrain_data.py](Data%20Pre-processing%20Code/preprocess_pretrain_data.py) header
-  (輸出文件的前綴名。腳本會生成如 .bencs.train 和 .types 等後綴的文件。)   
+  (輸出文件的前綴名。腳本會生成如 .bencs.train 和 .types 等後綴的文件。)
+  ex : python preprocess_pretrain_data.py `data_file.tsv` `NA` `Demo` `0`
+  產生 : Demo.bencs.train(valid/test),Demo.ptencs.train(valid/test) -> 包含了樣本的ICD code 序列(binary)   
+         Demo.types -> Dictionary(即詞彙表）   
 - <subset_size>: if you need to only preprocess a subset of the data, specify the subset size here (that should be the number of patients to be included), if you set it to 0 it will include all data.
   (處理的數據量限制。輸入 0 表示處理全部資料；若只想測試流程，可以輸入特定的數字（如 1000 表示只處理前 1000 筆資料）   
 
