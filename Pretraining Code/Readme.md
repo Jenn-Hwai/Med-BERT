@@ -48,7 +48,7 @@ As the BERT Tensorflow model mainly consume TF features (similar to an ordered d
 `<max_seq_length>:模型一次能處理的最大診斷代碼數量(即序列長度),如果病史超過64個診斷碼,程式會跳過該病患,不足的會padding,可設32,64,128,256等,太太耗記憶體`   
 `<max_predictions_per_seq>:決定了在一個序列中，最多可以「遮蓋」並預測多少個 Token`   
 `<masked_lm_prob>:Masked Language Model (MLM) 的核心機率，決定了序列中百分之多少的代碼會被拿來做練習(default=0.15)`   
-    ex: python create_BERTpretrain_EHRfeatures.py --input_file=Demo.bencs.train --output_file=Demo_output --vocab_file=Demo.types --max_predictions_per_seq=1 --max_seq_length=64   
+    ex: python create_BERTpretrain_EHRfeatures.py --input_file=Demo.bencs.train --output_file=pretrain_data.train.tfrecord --vocab_file=Demo.types --max_predictions_per_seq=1 --max_seq_length=64   
 
 Each patient features will look like
 
