@@ -41,7 +41,7 @@ The data will be in 3 splits with a ratio of 7:1:2 for training, validation, and
 As the BERT Tensorflow model mainly consume TF features (similar to an ordered dictionary), you will need to run the following statement to convert the above created pickled list to TF features
 
     python create_BERTpretrain_EHRfeatures.py --input_file=<output_Prefix.bencs.train> --output_file='output_file' --vocab_file=<output_Prefix.types>--max_predictions_per_seq=1 --max_seq_length=64   
-`NOTE : 程式修正(程式碼使用的是 TensorFlow 1.x 的語法，目前的執行環境是 TensorFlow 2.x)`
+`NOTE : 程式修正(程式碼使用的是 TensorFlow 1.x 的語法，目前的執行環境是 TensorFlow 2.x)`   
    import tensorflow.compat.v1 as tf(加入)   
    tf.disable_v2_behavior(加入)   
    #import tensorflow as tf(不用)   
